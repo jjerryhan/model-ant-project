@@ -12,7 +12,7 @@ pipeline {
         }
         stage('dist') {
             steps {
-                echo 'copy to target location'
+                echo 'copy to target locations'
             }
         }
         stage('deploy') {
