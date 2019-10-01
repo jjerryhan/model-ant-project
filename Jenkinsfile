@@ -1,9 +1,4 @@
-======jenkins file=================
 pipeline {
-    environment {
-        java_7_runtime_lib=‘E:/alm/java/jdk1.7.0_80/jre/lib'
-        javac_7 = 'E:/alm/java/jdk1.7.0_80/bin/javac'
-    }
     stages {
         stage('build-develop') {
             environment {
