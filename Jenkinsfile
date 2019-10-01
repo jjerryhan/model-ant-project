@@ -1,23 +1,20 @@
 pipeline {
+    agent any
+
     stages {
-        stage('build-develop') {
-            environment {
-                servertype='uat'
-            }
+        stage('Build') {
             steps {
-                withAnt(installation: 'Ant 1.10.6', jdk: 'JDK 1.8.0_221') {
-                    bat 'ant package -Dservertype=develope'
-                }
+                echo 'Building..'
             }
         }
-        stage('dist') {
+        stage('Test') {
             steps {
-                echo 'copy to target locations'
+                echo 'Testing..'
             }
         }
-        stage('deploy') {
+        stage('Deploy') {
             steps {
-                echo 'restart was'
+                echo 'Deploying....'
             }
         }
     }
